@@ -1,10 +1,10 @@
 object MyFirst extends App {
   
   println("Hello world")
-  
   def add(num: Int=8,incrementBy: Int =1)= {
     num + incrementBy
   }
+  
   println(add(7))
 
   case class Address(city:String,State: String)
@@ -13,6 +13,7 @@ object MyFirst extends App {
     var firstName: Option[String] = None
     var lastName: Option[String] = None
     var address: Option[Address] = None
+  
   }
   
   val user = new User("Shasibusan","Jena" )
