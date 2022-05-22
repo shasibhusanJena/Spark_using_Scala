@@ -1,3 +1,5 @@
+package org.fundamental
+
 object calculator {
   def main(args: Array[String]): Unit = {
     

@@ -1,5 +1,7 @@
 
 
+package org.fundamental
+
 object ScalaLearning3 {
   def main(args: Array[String]): Unit = {
     val a = Array(1,2,3,4,5)

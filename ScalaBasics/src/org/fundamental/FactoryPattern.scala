@@ -1,5 +1,7 @@
 
 
+package org.fundamental
+
 object FactoryPattern extends App {
 
   trait Computer{

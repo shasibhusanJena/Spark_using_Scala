@@ -1,3 +1,5 @@
+package org.fundamental
+
 import scala.io.StdIn._
 class PerfSquare {
   

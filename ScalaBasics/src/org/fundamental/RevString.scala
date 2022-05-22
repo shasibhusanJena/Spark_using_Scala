@@ -1,3 +1,5 @@
+package org.fundamental
+
 import scala.io.StdIn._
 object RevString {
   def main(args: Array[String]): Unit = {

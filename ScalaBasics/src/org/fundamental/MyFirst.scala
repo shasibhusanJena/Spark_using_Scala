@@ -1,3 +1,5 @@
+package org.fundamental
+
 object MyFirst extends App {
   
   println("Hello world")
