@@ -10,7 +10,7 @@ object GetCountOfValues extends App {
   //spark context object
   val sc = new SparkContext("local[*]","GetCountOfValues")
   //read file input
-  val input = sc.textFile("C:/file/sample.txt")
+  val input = sc.textFile("./files/sample.txt")
   //split by " "
   val words = input.flatMap(x=> x.split(" "))
   //(x,1)
