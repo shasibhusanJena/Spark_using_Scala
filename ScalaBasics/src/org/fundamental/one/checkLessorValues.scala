@@ -2,7 +2,7 @@
 */
 // 5 20
 // 10 20 30 40 50 
-package org.fundamental
+package org.fundamental.one
 
 import scala.io.StdIn._
 object checkLessorValues {

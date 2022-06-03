@@ -1,4 +1,4 @@
-package org.fundamental
+package org.fundamental.one
 
 object calculator {
   def main(args: Array[String]): Unit = {

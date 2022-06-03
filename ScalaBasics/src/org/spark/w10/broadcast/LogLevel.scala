@@ -1,4 +1,4 @@
-package org.scala.week10.broadcast
+package org.spark.w10.broadcast
 import org.apache.spark.SparkContext
 import org.apache.log4j.Level
 import org.apache.log4j.Logger

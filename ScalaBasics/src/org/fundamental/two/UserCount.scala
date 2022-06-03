@@ -1,4 +1,4 @@
-package org.scala
+package org.fundamental.two
 
 import org.apache.spark.SparkContext
 import org.apache.log4j.Level

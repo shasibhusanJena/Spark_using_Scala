@@ -1,6 +1,6 @@
 
 
-package org.fundamental
+package org.fundamental.one
 
 object FactoryPattern extends App {
 

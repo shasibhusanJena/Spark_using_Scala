@@ -1,14 +1,14 @@
-package org.scala
+package org.fundamental.two
 import org.apache.spark.SparkContext
 import org.apache.log4j.Level
 import org.apache.log4j.Logger
-//03
-// Sort values based on second column.
-object GetCountSortByValue extends App {
+
+//02
+object GetCountOfValues extends App {
   //logger setup
   Logger.getLogger("org").setLevel(Level.ERROR)
   //spark context object
-  val sc = new SparkContext("local[*]","GetCountSortByValue")
+  val sc = new SparkContext("local[*]","GetCountOfValues")
   //read file input
   val input = sc.textFile("./files/sample.txt")
   //split by " "
@@ -19,7 +19,10 @@ object GetCountSortByValue extends App {
   // final count after applying reduce by key
   val finalCount = toWordMap.reduceByKey((x,y)=> x+y)
   
-  val sortedResults =finalCount.sortBy(x => x._2,false)
+  // we want tuple to reversh (big,1) to (1,big)
+  val reverseTuple =  finalCount.map(x => (x._2,x._1))
+  
+  val sortedResults =reverseTuple.sortByKey(false).map(x=> (x._2,x._1))
   
   // now remove the () from the result for better printing
   val results =sortedResults.collect
@@ -29,6 +32,6 @@ object GetCountSortByValue extends App {
     val count = result._2
     println(s"$word,$count")
   }
-  scala.io.StdIn.readLine()
+  //scala.io.StdIn.readLine()
   
 }

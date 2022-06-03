@@ -1,7 +1,7 @@
 
 // for anf forEach loop both give the same output, 
 // but scala internally converts For loop to forEach loop
-package org.fundamental
+package org.fundamental.one
 
 object ForEach extends App {
   for(i <- 1 to 10) println(i*i)

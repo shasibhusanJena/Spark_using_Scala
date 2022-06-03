@@ -1,6 +1,6 @@
 
 
-package org.fundamental
+package org.fundamental.one
 
 object ScalaLearning3 {
   def main(args: Array[String]): Unit = {

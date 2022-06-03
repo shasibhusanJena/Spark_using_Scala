@@ -1,6 +1,6 @@
 
 
-package org.fundamental
+package org.fundamental.one
 
 object calculateArea extends App {
   val r =10
