@@ -19,7 +19,7 @@ object Rating extends App{
 
 	Logger.getLogger("org").setLevel(Level.ERROR)
 	val sc = new SparkContext("local[*]","Rating")
-	val input = sc.textFile("./files/moviedata-201008-180523.data")
+	val input = sc.textFile("C:/execute/moviedata-201008-180523.data")
 	//get rating column from the input
 	val mappedInput = input.map(x => x.split("\t")(2))
 	// earlier we used to do (x=> (x,1)) now we can do countByValue, it will work exactly same.
