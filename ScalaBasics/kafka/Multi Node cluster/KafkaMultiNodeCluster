@@ -1,0 +1,66 @@
+
+## To run multi node cluster with three input files where files will three attributes different for each file input.
+ 
+ 
+ server.properties
+ machine1 - broker1
+ broker.id =0
+ ip1: 9092
+ /tmp/kafka-logs
+ 
+server1.properties
+ machine2 - broker2
+ broker.id =1
+ ip1: 9093
+ /tmp/kafka-log1
+ 
+ server2.properties
+ machine3 - broker3
+ broker.id =2
+ ip1: 9094
+ /tmp/kafka-log2
+ 
+ 1>
+ Start each server one by one.
+ 
+./kafka-server-start.sh ../config/server1.properties
+./kafka-server-start.sh ../config/server2.properties
+./kafka-server-start.sh ../config/server3.properties
+
+2>
+Create A topic with 3 partition 
+
+	./kafka-topics.sh --create --topic mynewtopic1 --bootstrap-server localhost:9092 --partitions 3 --replication-factor 1
+	
+	Command line -producer to producing data
+		./kafka-console-producer.sh --broker-list localhost:9092 --topic mynewtopic1
+	Command line -consumer to consume data
+		./kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic mynewtopic1 --from-beginning
+
+
+	./kafka-topics.sh --create --topic mynewtopic2 --bootstrap-server localhost:9093 --partitions 3 --replication-factor 1
+	
+	Command line -producer to producing data
+		./kafka-console-producer.sh --broker-list localhost:9093 --topic mynewtopic2
+	Command line -consumer to consume data
+		./kafka-console-consumer.sh --bootstrap-server localhost:9093 --topic mynewtopic2 --from-beginning
+		
+
+	./kafka-topics.sh --create --topic mynewtopic2 --bootstrap-server localhost:9094 --partitions 3 --replication-factor 1
+	
+	Command line -producer to producing data
+		./kafka-console-producer.sh --broker-list localhost:9093 --topic mynewtopic3
+	Command line -consumer to consume data
+		./kafka-console-consumer.sh --bootstrap-server localhost:9094 --topic mynewtopic3 --from-beginning
+	
+
+
+
+
+
+
+
+
+
+
+
