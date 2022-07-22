@@ -1,5 +1,6 @@
 
-## To run multi node cluster with three input files where files will three attributes different for each file input.
+## To run multi node cluster with three input files where files will three attributes different for each file
+ input.
  
  
  server.properties

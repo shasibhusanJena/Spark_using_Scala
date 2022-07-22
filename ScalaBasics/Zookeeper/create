@@ -1,0 +1,31 @@
+
+Here we want to execte the services.
+
+./kafka-server-start.sh ../config/server1.properties
+./kafka-server-start.sh ../config/server2.properties
+./kafka-server-start.sh ../config/server.properties
+
+Zookeeper helps to maintain list of active brokers.
+
+
+[cloudera@quickstart bin]$  
+
+[cloudera@quickstart bin]$ ./zookeeper-shell.sh localhost:2181
+Connecting to localhost:2181
+Welcome to ZooKeeper!
+JLine support is disabled
+
+WATCHER::
+
+WatchedEvent state:SyncConnected type:None path:null
+ls /brokers
+[ids, seqid, topics]
+ls /brokers/ids
+[]
+ls /brokers/ids
+[0]
+
+
+
+# below command to clean the log files in the tmp/ kafka location
+rm -rf /tmp/kafka-logs
