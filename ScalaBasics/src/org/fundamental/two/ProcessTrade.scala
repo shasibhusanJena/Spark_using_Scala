@@ -15,15 +15,11 @@ object ProcessTrade extends App {
   val words = input.flatMap(x=> x.split(" "))
   //(x,1)
   val toWordMap = words.map(x => (x,1))
-  
   // final count after applying reduce by key
   val finalCount = toWordMap.reduceByKey((x,y)=> x+y)
-  
   val sortedResults =finalCount.sortBy(x => x._2,false)
-  
   // now remove the () from the result for better printing
   val results =sortedResults.collect
-  
   for(result <- results){
     val word = result._1
     val count = result._2

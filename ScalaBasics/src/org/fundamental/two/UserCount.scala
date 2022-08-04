@@ -8,7 +8,7 @@ object UserCount extends App{
 	
 	Logger.getLogger("org").setLevel(Level.ERROR)
 	val sc = new SparkContext("local[*]","wordCount")
-	val input = sc.textFile("./files/sample.txt")
+	val input = sc.textFile("./files/others/sample.txt")
 	// means what very we have as input make them split by " "
 	val words = input.flatMap(_.split(" "))
 	val toLowercase = words.map(_.toLowerCase())

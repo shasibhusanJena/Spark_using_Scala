@@ -11,7 +11,7 @@ object TotalSpends extends App{
 	val sc = new SparkContext("local[*]","TotalSpends")
 	
   //read file input
-  val input = sc.textFile("./files/customerorders-201008-180523.csv")
+  val input = sc.textFile("./files/others/customerorders-201008-180523.csv")
   // we are makeing toFloat as it was taking input as a string and was appending the second column with it
   val mappedInput = input.map(x => (x.split(",")(0),x.split(",")(2).toFloat))
   //reduce by key
