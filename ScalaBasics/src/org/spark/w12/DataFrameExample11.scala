@@ -6,7 +6,7 @@ import org.apache.log4j.Level
 import org.apache.log4j.Logger
 import org.apache.spark.sql.SaveMode
 
-object DataFrameExample11 {
+object DataFrameExample11 extends App {
   /*
    * Create Avro tyep file
    * for that we have to download a jar file 

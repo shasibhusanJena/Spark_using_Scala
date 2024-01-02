@@ -21,6 +21,7 @@ object DFExplicitSchema1 extends App {
 /*
  * ("orderId",IntegerType,true) here true means nullable not allowed
  * */
+              
   val ordersSchema = StructType(List(
       
       StructField("orderId",IntegerType,true),
